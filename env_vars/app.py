@@ -1,6 +1,7 @@
 import json
 import os
 
+
 def lambda_handler(event, context):
     """Display Lambda environment variables
 
