@@ -28,23 +28,26 @@ def lambda_handler(event, context):
     """
 
     body = {
-        "_HANDLER": os.environ.get('_HANDLER'),
-        "AWS_REGION": os.environ.get('AWS_REGION'),
-        "AWS_EXECUTION_ENV": os.environ.get('AWS_EXECUTION_ENV'),
-        "AWS_LAMBDA_FUNCTION_NAME": os.environ.get('AWS_LAMBDA_FUNCTION_NAME'),
-        "AWS_LAMBDA_FUNCTION_MEMORY_SIZE": os.environ.get('AWS_LAMBDA_FUNCTION_MEMORY_SIZE'),
-        "AWS_LAMBDA_FUNCTION_VERSION": os.environ.get('AWS_LAMBDA_FUNCTION_VERSION'),
-        "AWS_LAMBDA_LOG_GROUP_NAME":  os.environ.get('AWS_LAMBDA_LOG_GROUP_NAME'),
-        "AWS_LAMBDA_LOG_STREAM_NAME":  os.environ.get('AWS_LAMBDA_LOG_STREAM_NAME'),
-        "LANG":  os.environ.get('LANG'),
-        "TZ":  os.environ.get('TZ'),
-        "LAMBDA_TASK_ROOT":  os.environ.get('LAMBDA_TASK_ROOT'),
-        "LAMBDA_RUNTIME_DIR":  os.environ.get('LAMBDA_RUNTIME_DIR'),
-        "PATH":  os.environ.get('PATH'),
-        "LD_LIBRARY_PATH":  os.environ.get('LD_LIBRARY_PATH'),
-        "PYTHONPATH":  os.environ.get('PYTHONPATH'),
-        "AWS_LAMBDA_RUNTIME_API":  os.environ.get('AWS_LAMBDA_RUNTIME_API')
+        "_HANDLER": os.environ.get("_HANDLER"),
+        "AWS_REGION": os.environ.get("AWS_REGION"),
+        "AWS_EXECUTION_ENV": os.environ.get("AWS_EXECUTION_ENV"),
+        "AWS_LAMBDA_FUNCTION_NAME": os.environ.get("AWS_LAMBDA_FUNCTION_NAME"),
+        "AWS_LAMBDA_FUNCTION_MEMORY_SIZE": os.environ.get(
+            "AWS_LAMBDA_FUNCTION_MEMORY_SIZE"
+        ),
+        "AWS_LAMBDA_FUNCTION_VERSION": os.environ.get("AWS_LAMBDA_FUNCTION_VERSION"),
+        "AWS_LAMBDA_LOG_GROUP_NAME": os.environ.get("AWS_LAMBDA_LOG_GROUP_NAME"),
+        "AWS_LAMBDA_LOG_STREAM_NAME": os.environ.get("AWS_LAMBDA_LOG_STREAM_NAME"),
+        "LANG": os.environ.get("LANG"),
+        "TZ": os.environ.get("TZ"),
+        "LAMBDA_TASK_ROOT": os.environ.get("LAMBDA_TASK_ROOT"),
+        "LAMBDA_RUNTIME_DIR": os.environ.get("LAMBDA_RUNTIME_DIR"),
+        "PATH": os.environ.get("PATH"),
+        "LD_LIBRARY_PATH": os.environ.get("LD_LIBRARY_PATH"),
+        "PYTHONPATH": os.environ.get("PYTHONPATH"),
+        "AWS_LAMBDA_RUNTIME_API": os.environ.get("AWS_LAMBDA_RUNTIME_API"),
     }
+    print(f"Hello there this is the body: {body}")
 
     return {
         "statusCode": 200,

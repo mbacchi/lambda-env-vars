@@ -13,7 +13,7 @@ described
 This SAM function template was created with the command:
 
 ```
-sam init --runtime python3.7 --dependency-manager pip --name lambda-env-vars --app-template hello-world
+sam init --runtime python3.8 --dependency-manager pip --name lambda-env-vars --app-template hello-world
 ```
 
 I then modified the SAM Template files `app.py`, `template.yaml` and others in
@@ -29,15 +29,15 @@ You can try this function out by running `sam local invoke` with the below comma
 ```
 sam local invoke LambdaEnvVarsFunction --event events/event.json
 
-Invoking app.lambda_handler (python3.7)
+Invoking app.lambda_handler (python3.8)
 
-Fetching lambci/lambda:python3.7 Docker container image.............................................................................................................................................................................................................................................................
+Fetching lambci/lambda:python3.8 Docker container image.............................................................................................................................................................................................................................................................
 Mounting /home/mbacchi/data/repos/mbacchi/lambda-env-vars/.aws-sam/build/LambdaEnvVarsFunction as /var/task:ro,delegated inside runtime container
 START RequestId: b8396045-b89a-164d-4fa1-a2aea54ddcb5 Version: $LATEST
 END RequestId: b8396045-b89a-164d-4fa1-a2aea54ddcb5
 REPORT RequestId: b8396045-b89a-164d-4fa1-a2aea54ddcb5	Init Duration: 2066.65 ms	Duration: 2.33 ms	Billed Duration: 100 ms	Memory Size: 128 MB	Max Memory Used: 23 MB	
 
-{"statusCode":200,"body":"{\"_HANDLER\": \"app.lambda_handler\", \"AWS_REGION\": \"us-east-1\", \"AWS_EXECUTION_ENV\": \"AWS_Lambda_python3.7\", \"AWS_LAMBDA_FUNCTION_NAME\": \"test\", \"AWS_LAMBDA_FUNCTION_MEMORY_SIZE\": \"128\", \"AWS_LAMBDA_FUNCTION_VERSION\": \"$LATEST\", \"AWS_LAMBDA_LOG_GROUP_NAME\": \"/aws/lambda/test\", \"AWS_LAMBDA_LOG_STREAM_NAME\": \"2019/12/01/[$LATEST]be32830d70b0de7e919b98b8e48d9e78\", \"LANG\": \"en_US.UTF-8\", \"TZ\": \":UTC\", \"LAMBDA_TASK_ROOT\": \"/var/task\", \"LAMBDA_RUNTIME_DIR\": \"/var/runtime\", \"PATH\": \"/var/lang/bin:/usr/local/bin:/usr/bin/:/bin:/opt/bin\", \"LD_LIBRARY_PATH\": \"/var/lang/lib:/lib64:/usr/lib64:/var/runtime:/var/runtime/lib:/var/task:/var/task/lib:/opt/lib\", \"PYTHONPATH\": null, \"AWS_LAMBDA_RUNTIME_API\": null}"}
+{"statusCode":200,"body":"{\"_HANDLER\": \"app.lambda_handler\", \"AWS_REGION\": \"us-east-1\", \"AWS_EXECUTION_ENV\": \"AWS_Lambda_python3.8\", \"AWS_LAMBDA_FUNCTION_NAME\": \"test\", \"AWS_LAMBDA_FUNCTION_MEMORY_SIZE\": \"128\", \"AWS_LAMBDA_FUNCTION_VERSION\": \"$LATEST\", \"AWS_LAMBDA_LOG_GROUP_NAME\": \"/aws/lambda/test\", \"AWS_LAMBDA_LOG_STREAM_NAME\": \"2019/12/01/[$LATEST]be32830d70b0de7e919b98b8e48d9e78\", \"LANG\": \"en_US.UTF-8\", \"TZ\": \":UTC\", \"LAMBDA_TASK_ROOT\": \"/var/task\", \"LAMBDA_RUNTIME_DIR\": \"/var/runtime\", \"PATH\": \"/var/lang/bin:/usr/local/bin:/usr/bin/:/bin:/opt/bin\", \"LD_LIBRARY_PATH\": \"/var/lang/lib:/lib64:/usr/lib64:/var/runtime:/var/runtime/lib:/var/task:/var/task/lib:/opt/lib\", \"PYTHONPATH\": null, \"AWS_LAMBDA_RUNTIME_API\": null}"}
 ```
 
 ### Deploying to AWS
