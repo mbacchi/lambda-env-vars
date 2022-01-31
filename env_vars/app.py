@@ -47,6 +47,7 @@ def lambda_handler(event, context):
         "PYTHONPATH": os.environ.get("PYTHONPATH"),
         "AWS_LAMBDA_RUNTIME_API": os.environ.get("AWS_LAMBDA_RUNTIME_API"),
     }
+    print(f"Hello there this is the body: {body}")
 
     return {
         "statusCode": 200,
