@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: '2010-09-09'
+AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Description: >
   lambda-env-vars
@@ -43,3 +43,6 @@ Outputs:
   LambdaEnvVarsFunctionIamRole:
     Description: "Implicit IAM Role created for Lambda Env Vars function"
     Value: !GetAtt LambdaEnvVarsFunctionRole.Arn
+  LambdaLogGroup:
+    Description: "Cloudwatch Log Group ARN"
+    Value: !Join ["", ["/aws/lambda/", !Ref LambdaEnvVarsFunction]]
